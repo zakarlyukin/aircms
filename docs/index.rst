@@ -27,6 +27,43 @@ POST data: L=<login>&t=<timestamp>&d="{'c':<co>,'d':<dust>}"
 * hash = sha1(sha1(<token>) + sha1("L=<login>&t=<timestamp>&d=\"{'c':<co>,'d':<dust>}\""));
 * token — need to get, not show in query, SECRET information.
 
+Pull sensors' data from storage
+-------------------------------
+
+* Get devices list:
+  https://HOST/php/guiapi.php?devices
+  JSON-answer example::
+  {
+    "data":[
+      {"id":"1","lat":"11.111","lon":"22.222"},
+      {"id":"2","lat":"55.144641","lon":"61.393387"}
+    ],
+    "debug":[]
+  }
+
+* Get current relative values. Count as different between last and prelast values:
+  http://HOST/php/guiapi.php?T=0
+  JSON-answer example::
+  {
+    "data":[
+    {
+      "id":"29195",
+      "device_id":"2",
+      "temperature":"-8",
+      "wind_speed":"2",
+      "wind_direction":"e",
+      "pressure":"746",
+      "humidity":"45",
+      "co":0,
+      "dust":-1,
+      "ts":"2018-03-13 13:47:32"
+    }
+    ],
+      "debug":[]
+  }
+
+
+
 Indices and tables
 ==================
 
