@@ -31,7 +31,9 @@ Pull sensors' data from storage
 -------------------------------
 
 * Get devices list:
+
   https://HOST/php/guiapi.php?devices
+  
   JSON-answer example:
   ::
     {
@@ -43,7 +45,9 @@ Pull sensors' data from storage
     }
 
 * Get current relative values. Count as different between last and prelast values:
+
   http://HOST/php/guiapi.php?T=0
+  
   JSON-answer example:
   ::
     {
