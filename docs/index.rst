@@ -23,7 +23,7 @@ POST data: L=<login>&t=<timestamp>&d="{'c':<co>,'d':<dust>}"
 * login — need to get, show in query, not secret information;
 * timestamp — current Unix timestamp;
 * co — CO-sensor value in ppm, -1 if absent;
-* dust — dust-sensor value for PM2.5pm in mcg/m3, -1 if absent;
+* dust — dust-sensor value for PM2.5 in mcg/m3, -1 if absent;
 * hash = sha1(sha1(<token>) + sha1("L=<login>&t=<timestamp>&d=\"{'c':<co>,'d':<dust>}\""));
 * token — need to get, not show in query, SECRET information.
 
@@ -44,9 +44,13 @@ Pull sensors' data from storage
       "debug":[]
     }
 
-* Get current relative values. Count as different between last and prelast values:
+* Get current values.
 
   http://HOST/php/guiapi.php?T=0
+  
+  — sds_p1 — PM2.5 in mcg/m3;
+  
+  — sds_p2 — PM10 in mcg/m3.
   
   JSON-answer example:
   ::
@@ -55,13 +59,13 @@ Pull sensors' data from storage
       {
         "id":"29195",
         "device_id":"2",
-        "temperature":"-8",
         "wind_speed":"2",
         "wind_direction":"e",
         "pressure":"746",
         "humidity":"45",
-        "co":0,
-        "dust":-1,
+        "sds_p1":0,
+        "sds_p2":-1,
+        "ds18b20_temperature":"-8",
         "ts":"2018-03-13 13:47:32"
       }
       ],
