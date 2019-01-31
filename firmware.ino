@@ -3,7 +3,30 @@
 #define DEBUG_ESP_PORT Serial
 
 /*****************************************************************
-/*                                                               *
+/*  
+ *    airRohr firmware                                                  *
+ *    Copyright (C) 2016-2018  Code for Stuttgart a.o.                  *
+ *                                                                      *
+ * This program is free software: you can redistribute it and/or modify *
+ * it under the terms of the GNU General Public License as published by *
+ * the Free Software Foundation, either version 3 of the License, or    *
+ * (at your option) any later version.                                  *
+ *                                                                      *
+ * This program is distributed in the hope that it will be useful,      *
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of       *
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the        *
+ * GNU General Public License for more details.                         *
+ *                                                                      *
+ * You should have received a copy of the GNU General Public License    *
+ * along with this program. If not, see <http://www.gnu.org/licenses/>. *
+ *                                                                      *
+ ************************************************************************
+ * OK LAB Particulate Matter Sensor                                     *
+ *      - nodemcu-LoLin board                                           *
+ *      - Nova SDS0111                                                  *
+ *  http://inovafitness.com/en/Laser-PM2-5-Sensor-SDS011-35.html        *
+ *                                                                      *
+/*
 /*  This source code needs to be compiled for the board          *
 /*  NodeMCU 1.0 (ESP-12E Module)                                 *
 /*                                                               *
@@ -63,6 +86,10 @@
 /*      GND       ->     Pin GND                                 *
 /*      SCL       ->     Pin D4 (GPIO2)                          *
 /*      SDA       ->     Pin D3 (GPIO0)                          *
+/*                                                               *
+/*****************************************************************
+/* Extension: IAQCore (VOC)                                      *
+/*  ﻿https://github.com/hafu/IAQCore/blob/master/IAQCore.h       *
 /*                                                               *
 /*****************************************************************
 /*                                                               *
