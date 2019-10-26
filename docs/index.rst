@@ -53,7 +53,7 @@ Pull sensors' data from storage
         "sds_p1":0,
         "sds_p2":-1,
         "ds18b20_temperature":"-8",
-        "ts":"2018-03-13 13:47:32"
+        "ts":"89" // Time in secs, gone from moment, when this value was written in DB
       }
       ],
         "debug":[]
